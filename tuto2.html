@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // demande 2 nombres à l'utilisateur, les multiplie et affiche en console si le resultat est positif ou non 
+        const a = prompt("Premier nombre ?")
+        const b = prompt("Second nombre ?")
+        const c = a * b
+        if (isNaN(c)) {
+            console.log("On demande un nombre ptit malin")
+        } else {
+           if (c > 0) {
+                console.log("Resultat positif")
+            } else {
+                console.log("Resultat negatif")
+            }
+        }
+
+    </script>
+
+    <!-- <script>
+        const color = prompt('What is your favorite color ?')
+
+        switch (color) {
+            case 'blue':
+                console.log('Bleu comme mon steak')
+                break;
+        
+            default:
+                console.log('ahhhhhh')
+                break;
+        }
+    </script> -->
+
+    <!-- <script>
+        console.log('Coucou')
+
+        const  isOk = false
+        if (isOk) {
+            console.log(" isOk")
+        } else {
+            console.log(" isNotOk ")
+        }
+
+        const a4 = '4'
+        const b4 = 4
+        if (a4 == b4) {
+            console.log(" '4' == 4")
+        } 
+        if (a4 != b4) {
+            console.log(" '4' != 4")
+        } 
+        if (a4 === b4) {
+            console.log(" '4' === 4")
+        } 
+        if (a4 !== b4) {
+            console.log(" '4' !== 4")
+        }
+
+        // un objet meme vide est consideré comme vrai
+        if ({}) {
+            console.log(" {} est vrai ")
+        }
+
+        if (true && true) {
+            console.log(" true && true est vrai")
+        }
+        if (true && false) {
+            console.log(" true && false est vrai")
+        }
+        if (false && false) {
+            console.log(" false && false est vrai")
+        }
+        if (false || true) {
+            console.log(" false || true est vrai")
+        }
+        if (true || false) {
+            console.log(" true || false est vrai")
+        }
+        if (false || false) {
+            console.log(" true || false est vrai")
+        }
+
+        const case_test = 'blue'
+        switch (case_test) {
+            case 'red':
+                console.log("rouge")
+                break
+            case 'blue':
+                console.log("bleu")
+                break
+            default : 
+                console.log("couleur inconnue")
+        }
+
+    </script> -->
+</head>
+<body>
+    
+</body>
+</html>
