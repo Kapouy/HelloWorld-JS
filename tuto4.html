@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(isTrue(true))
+
+        // porté normale des fonctions
+        function isTrue(bool) {
+            if (bool) {
+                return true
+            }
+            return false
+        }
+
+        // même porté qu'une variable classique
+        const canDrive = function (age, pays) {
+            if (
+                (age >= 18 && pays === 'FR') ||
+                (age >= 16 && pays === 'US')
+            ) {
+                return true
+            } else {
+                return false
+            }
+            
+        }
+
+        console.log(canDrive(17, 'US'))
+
+        const a = {
+            firstname: 'John',
+            lastname: 'Doe',
+            fullname: function () {
+                console.log(`${this.lastname} ${this.firstname}`)
+            }
+        }
+
+        a.fullname()
+
+        const maFonction = (param1) => {
+            console.log(param1)
+            console.log(this) // affiche tjrs l'objet le plus haut (windows) dans les fonction '=>'
+        }
+
+        maFonction(param1)
+        maFonction.call(param1) // pour essayer de modifier la variable this
+
+        const somme = (a,b)=>a+b // si y'a que le return , pas besoin des {return}
+
+        const isPair = function (a,cb) {
+            if (a%2===0) cb(a)
+        }
+
+        // callback
+        isPair(3, function(n) {
+            console.log('Mon nombre est pair' +n)
+        })
+
+    </script>
+</body>
+</html>
