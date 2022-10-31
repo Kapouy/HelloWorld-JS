@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Telecommande {
+            marque = 'Tamtung'
+
+            constructor (nb_bouton) {
+                console.log(this)
+                this.nb_bouton = nb_bouton
+            }
+
+            setCouleur (couleur) {
+                this.couleur = couleur
+            }
+
+            set frequence (f) {
+                this._frequence = f
+            }
+
+            get frequence () {
+                return this._frequence
+            }
+
+            pushButton (bouton) {
+                return bouton <= this.nb_bouton
+            }
+        }
+
+        const commande_Tele = new Telecommande(5)
+        const commande_Lumiere = new Telecommande(2)
+        commande_Lumiere.setCouleur("Blue")
+        commande_Lumiere.frequence = 475
+        console.log(commande_Tele.pushButton(12))
+
+
+    </script>
+</body>
+</html>
